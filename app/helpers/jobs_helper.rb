@@ -1,9 +1,9 @@
 module JobsHelper
   def render_job_status(job)
     if job.is_hidden
-      "(Hidden)"
+      content_tag(:span, "", :class => "fa fa-lock fa-lg")
     else
-      "(Public)"
+      content_tag(:span, "", :class => "fa fa-globe fa-lg")
     end
   end
 end
